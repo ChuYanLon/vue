@@ -2,7 +2,6 @@ import Vue from "vue"
 import router from "vue-router"
 
 Vue.use(router)
-
 export default new router({
     mode: 'history',
     routes: [
@@ -34,7 +33,11 @@ export default new router({
                     path: "homeli",
                     component: () => import("../view/home/homeli.vue")
                 }
-            ]
+            ],
+            beforeEnter:(to,form,next)=>{
+                console.log("------------");
+                next()
+            }
         },
         // 说一说
         {
@@ -54,12 +57,6 @@ export default new router({
         }
     ]
 })
-
-
-
-
-
-
 
 
 

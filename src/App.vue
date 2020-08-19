@@ -7,7 +7,9 @@
      <!-- <router-link :to="`/use/${id}/${name}/${eax}`">关于我</router-link> -->
 <!--        <router-link :to="{path:'/use',query:{id:`${id}`,name:`${name}`,eax:`${eax}`}}">关于我</router-link>-->
       <button @click="bth">个人档案</button>
-   <router-view></router-view>
+      <keep-alive>
+      <router-view></router-view>
+      </keep-alive>
   </div>
 </template>
 
@@ -33,7 +35,7 @@ export default {
               }
           })
       }
-    },
+    }
 }
 </script>
 
